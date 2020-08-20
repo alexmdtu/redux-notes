@@ -23,14 +23,10 @@ const noteReducer = (state = [], action) => {
 const generateId = () =>
     Number((Math.random() * 1000000).toFixed(0))
 
-export const createNote = (content) => {
+export const createNote = (data) => {
     return {
         type: 'NEW_NOTE',
-        data: {
-            content,
-            important: false,
-            id: generateId()
-        }
+        data
     }
 }
 
